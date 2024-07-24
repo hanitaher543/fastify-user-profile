@@ -15,14 +15,6 @@ const User = sequelize.define('User',{
     email : {
         type :DataTypes.STRING,
         allowNull : false
-    },
-    userId :{  // Ajoutez la clé étrangère
-        type : DataTypes.INTEGER,
-        references : {
-            model :'Users',
-            key : 'id'
-        },
-        unique: true // Assure qu'un profil n'est associé qu'à un utilisateur
     }
 });
 
